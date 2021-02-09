@@ -22,7 +22,7 @@
 // #define DLIB_USE_FFTW
 // #define DLIB_USE_BLAS
 // #define DLIB_USE_LAPACK
-#define DLIB_USE_CUDA
+#define DLIB_USE_CUDA true
 
 
 // Define this so the code in dlib/test_for_odr_violations.h can detect ODR violations
