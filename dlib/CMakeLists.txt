@@ -281,6 +281,7 @@ if (NOT TARGET dlib)
    set(dlib_needed_includes)
 
    if (DLIB_ISO_CPP_ONLY)
+      message(STATUS "NEMANJAAA DLIB_ISO_CPP_ONLY")
       add_library(dlib ${source_files} )
    else()
 
@@ -602,6 +603,7 @@ if (NOT TARGET dlib)
 
 
       if (DLIB_USE_CUDA)
+         message(STATUS "USAO JE U DLIB_USE_CUDA")
          find_package(CUDA 7.5)
 
          if (CUDA_VERSION VERSION_GREATER 9.1 AND CMAKE_VERSION VERSION_LESS 3.12.2)
@@ -750,7 +752,9 @@ if (NOT TARGET dlib)
             endif()
          endif()
 
+         message(STATUS "NEMANJA!")
          if (CUDA_FOUND AND cudnn AND cuda_test_compile_worked AND cudnn_test_compile_worked AND cudnn_include)
+            message(STATUS "USLO!")
             set(source_files ${source_files} 
                cuda/cuda_dlib.cu 
                cuda/cudnn_dlibapi.cpp
